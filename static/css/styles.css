@@ -1,0 +1,15 @@
+body, html {
+    height: 100%
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+}
+
+a {
+    font-size: 0.8em;
+}
+
+a:hover {
+    text-decoration: none;
+}

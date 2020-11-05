@@ -1,0 +1,28 @@
+<div class="container-fluid mt-3">
+    {{#if hasContent}}
+        <div class="row">
+            {{#each comicChars}}
+                <div class="col-sm-12 col-md-3 mb-4">
+                    <div class="card-deck h-100">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ this.thumbnail.path }}.{{ this.thumbnail.extension }}" alt={{ this.name }}>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ this.name }}</h5>
+                                <p class="card-text">{{ this.description }}</p>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <div><p class="card-text"><small class="text-muted">{{ this.modified }}</small></p></div>
+                                    <div><a href={{ this.urls.0.url }} target="_blank">Read More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            {{/each}}
+        </div>
+    {{else}}
+        <div>
+            <h5>Sorry! No result is found!</h5>
+        </div>
+    {{/if}}
+</div>
